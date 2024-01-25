@@ -52,7 +52,7 @@ const securityHeaders = [
  **/
 const nextConfig = {
   output: 'export',
-  basePath: '/finco-website',
+  basePath: '/',
   images: {
     unoptimized: true,
     remotePatterns: [
