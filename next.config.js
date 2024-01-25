@@ -52,7 +52,7 @@ const securityHeaders = [
  **/
 const nextConfig = {
   output: 'export',
-  basePath: '/',
+  basePath: '',
   images: {
     unoptimized: true,
     remotePatterns: [
