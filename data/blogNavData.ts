@@ -10,13 +10,13 @@ const servicesNavData: Service[] = [
     title: 'Investment Management',
     description: `DESCRIPTION HERE`,
     imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    href: '/services/investment-management',
   },
   {
     title: 'Financial Planning',
     description: `DESCRIPTION HERE`,
     imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    href: '/services/financial-planning',
   },
 ]
 

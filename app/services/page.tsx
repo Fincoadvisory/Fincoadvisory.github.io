@@ -1,4 +1,4 @@
-import servicesNavData from '@/data/services/servicesNavData'
+import servicesNavData from '@/data/servicesNavData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
 
