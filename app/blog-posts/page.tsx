@@ -1,5 +1,5 @@
 import blogPostsNavData from '@/data/blogPostsNavData'
-import Card from '@/components/Card'
+import Card from '@/components/CardNoImage'
 import { genPageMetadata } from 'app/seo'
 
 export const metadata = genPageMetadata({ title: 'Blog Posts' })
@@ -15,8 +15,8 @@ export default function Services() {
           Showcase your projects with a hero image (16 x 9)
         </p>
       </div> */}
-      <div className="container py-12">
-        <div className="-m-4 flex flex-wrap">
+      <div className="container py-0">
+        <div className="-m-4 flex flex-wrap self-center">
           {blogPostsNavData.map((d) => (
             <Card
               key={d.title}
