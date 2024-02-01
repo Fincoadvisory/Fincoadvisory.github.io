@@ -14,6 +14,7 @@ const Header = () => {
 
   const openServicesDropdown = () => {
     setServicesDropdownOpen(true)
+    setBlogDropdownOpen(false)
   }
 
   const closeServicesDropdown = () => {
@@ -22,6 +23,7 @@ const Header = () => {
 
   const openBlogDropdown = () => {
     setBlogDropdownOpen(true)
+    setServicesDropdownOpen(false)
   }
 
   const closeBlogDropdown = () => {
@@ -65,7 +67,7 @@ const Header = () => {
                     </span>
                     {isServicesDropdownOpen && (
                       <div
-                        className="absolute mt-2 space-y-2 rounded-md border border-white bg-white p-2 font-medium shadow-lg dark:border-gray-800 dark:bg-black"
+                        className="absolute mt-2 space-y-2 rounded-md border border-white bg-white p-2 font-medium shadow-lg dark:border-gray-900 dark:bg-gray-950"
                         onMouseLeave={closeServicesDropdown}
                       >
                         <Link href="/services/investment-management" className="block px-3 py-2">
@@ -92,7 +94,7 @@ const Header = () => {
                     </span>
                     {isBlogDropdownOpen && (
                       <div
-                        className="absolute mt-2 space-y-2 rounded-md border border-white bg-white p-2 font-medium shadow-lg dark:border-gray-800 dark:bg-black"
+                        className="absolute mt-2 space-y-2 rounded-md border border-white bg-white p-2 font-medium shadow-lg dark:border-gray-900 dark:bg-gray-950"
                         onMouseLeave={closeBlogDropdown}
                       >
                         <Link href="/blog" className="block px-3 py-2">
