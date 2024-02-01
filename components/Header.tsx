@@ -47,17 +47,22 @@ const Header = () => {
                       className="cursor-pointer font-medium text-gray-900 dark:text-gray-100"
                       onMouseEnter={openServicesDropdown}
                     >
-                      {link.title}
+                      <Link
+                        href={link.href}
+                        className="font-medium text-gray-900 dark:text-gray-100 sm:block"
+                      >
+                        {link.title}
+                      </Link>
                     </span>
                     {isServicesDropdownOpen && (
                       <div
-                        className="absolute mt-2 space-y-2 rounded-md border border-gray-200 bg-white p-2 shadow-lg dark:border-gray-600 dark:bg-gray-800"
+                        className="absolute mt-2 space-y-2 rounded-md border border-white bg-white p-2 shadow-lg dark:border-gray-800 dark:bg-black"
                         onMouseLeave={closeServicesDropdown}
                       >
-                        <Link href="/services/investment-management" className="block px-4 py-2">
+                        <Link href="/services/investment-management" className="block px-3 py-2">
                           Investment Management
                         </Link>
-                        <Link href="/services/financial-planning" className="block px-4 py-2">
+                        <Link href="/services/financial-planning" className="block px-3 py-2">
                           Financial Planning
                         </Link>
                       </div>
