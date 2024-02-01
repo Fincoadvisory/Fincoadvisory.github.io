@@ -1,23 +1,23 @@
 'use client'
-import { useState } from 'react';
-import siteMetadata from '@/data/siteMetadata';
-import headerNavLinks from '@/data/headerNavLinks';
-import Logo from '@/data/logo.svg';
-import Link from './Link';
-import MobileNav from './MobileNav';
-import ThemeSwitch from './ThemeSwitch';
-import SearchButton from './SearchButton';
+import { useState } from 'react'
+import siteMetadata from '@/data/siteMetadata'
+import headerNavLinks from '@/data/headerNavLinks'
+import Logo from '@/data/logo.svg'
+import Link from './Link'
+import MobileNav from './MobileNav'
+import ThemeSwitch from './ThemeSwitch'
+import SearchButton from './SearchButton'
 
 const Header = () => {
-  const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false)
 
   const openServicesDropdown = () => {
-    setServicesDropdownOpen(true);
-  };
+    setServicesDropdownOpen(true)
+  }
 
   const closeServicesDropdown = () => {
-    setServicesDropdownOpen(false);
-  };
+    setServicesDropdownOpen(false)
+  }
 
   return (
     <header className="flex items-center justify-between py-10">
@@ -85,7 +85,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
