@@ -10,6 +10,7 @@ import SearchButton from './SearchButton'
 
 const Header = () => {
   const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false)
+  const [isBlogDropdownOpen, setBlogDropdownOpen] = useState(false)
 
   const openServicesDropdown = () => {
     setServicesDropdownOpen(true)
@@ -17,6 +18,14 @@ const Header = () => {
 
   const closeServicesDropdown = () => {
     setServicesDropdownOpen(false)
+  }
+
+  const openBlogDropdown = () => {
+    setBlogDropdownOpen(true)
+  }
+
+  const closeBlogDropdown = () => {
+    setBlogDropdownOpen(false)
   }
 
   return (
@@ -64,6 +73,36 @@ const Header = () => {
                         </Link>
                         <Link href="/services/financial-planning" className="block px-3 py-2">
                           Financial Planning
+                        </Link>
+                      </div>
+                    )}
+                  </>
+                ) : link.title === 'Blog Posts' ? (
+                  <>
+                    <span
+                      className="cursor-pointer font-medium text-gray-900 dark:text-gray-100"
+                      onMouseEnter={openBlogDropdown}
+                    >
+                      <Link
+                        href={link.href}
+                        className="font-medium text-gray-900 dark:text-gray-100 sm:block"
+                      >
+                        {link.title}
+                      </Link>
+                    </span>
+                    {isBlogDropdownOpen && (
+                      <div
+                        className="absolute mt-2 space-y-2 rounded-md border border-white bg-white p-2 shadow-lg dark:border-gray-800 dark:bg-black"
+                        onMouseLeave={closeBlogDropdown}
+                      >
+                        <Link href="/blog" className="block px-3 py-2">
+                          All Posts
+                        </Link>
+                        <Link href="/tags/featured" className="block px-3 py-2">
+                          Featured
+                        </Link>
+                        <Link href="/tags/classics" className="block px-3 py-2">
+                          Classics
                         </Link>
                       </div>
                     )}
