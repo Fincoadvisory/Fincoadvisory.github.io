@@ -2,7 +2,7 @@
 import Link from './Link'
 
 const Card = ({ title, description, imgSrc, href }) => (
-  <div className="md max-w-[544px] flex-grow p-4 md:w-1/2">
+  <div className="md flex-grow p-4 md:w-1/2">
     <Link href={href} aria-label={`Link to ${title}`}>
       <div
         className={`${
