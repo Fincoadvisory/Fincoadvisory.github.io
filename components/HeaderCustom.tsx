@@ -32,7 +32,7 @@ const Header = () => {
   ]
 
   return (
-    <header className="flex items-center justify-between py-10">
+    <header className="flex justify-between p-10">
       <div className="flex items-center">
         <div className="mr-5">
           <Link href="/" aria-label={siteMetadata.headerTitle}>
@@ -75,8 +75,10 @@ const Header = () => {
           ))}
         </ul>
       </div>
-      <div className="flex items-center">
-        <SearchButton />
+      <div className="ml-auto flex items-center">
+        <div className="hidden md:flex">
+          <SearchButton />
+        </div>
         <div className="ml-3.5 flex items-center">
           <ThemeSwitch />
         </div>
