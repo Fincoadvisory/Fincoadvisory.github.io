@@ -1,4 +1,3 @@
-// Header.tsx
 import siteMetadata from '@/data/siteMetadata'
 import Logo from '@/data/logo.svg'
 import React from 'react'
