@@ -1,33 +1,71 @@
+import siteMetadata from '@/data/siteMetadata'
+import Logo from '@/data/logo.svg'
 import React from 'react'
+import Link from './Link'
+import SearchButton from './SearchButton'
+import ThemeSwitch from './ThemeSwitch'
+import MobileNav from './MobileNavCustom'
 
 const Header = () => {
   const links = [
-    { label: 'Home', to: '/' },
-    { label: 'About', to: '/about', subLinks: ['History', 'Team', 'Mission'] },
-    { label: 'Services', to: '/services', subLinks: ['Web Design', 'SEO', 'Marketing'] },
-    { label: 'Contact', to: '/contact' },
+    {
+      label: 'Services',
+      to: '/services',
+      subLinks: ['Investment Management', 'Financial Planning'],
+      subLinksTo: ['/services/investment-management', '/services/financial-planning'],
+    },
+    {
+      label: 'Blog Posts',
+      to: '/blog-posts',
+      subLinks: ['All Posts', 'Featured', 'Classics'],
+      subLinksTo: ['/blog', '/tags/featured', '/tags/classics'],
+    },
+    {
+      label: 'Contact Us',
+      to: '/contact-us',
+    },
+    {
+      label: 'About',
+      to: '/about',
+    },
   ]
 
   return (
-    <nav className="bg-gray-800 p-4">
-      <div className="flex items-center justify-between">
-        <div className="font-bold text-white">Your Logo</div>
-        <ul className="flex space-x-4">
+    <header className="flex items-center justify-between py-10">
+      <div className="flex items-center">
+        <div className="mr-5">
+          <Link href="/" aria-label={siteMetadata.headerTitle}>
+            <div className="flex items-center">
+              <div className="mr-3">
+                <Logo />
+              </div>
+              {typeof siteMetadata.headerTitle === 'string' ? (
+                <div className="hidden h-6 text-2xl font-semibold">{siteMetadata.headerTitle}</div>
+              ) : (
+                siteMetadata.headerTitle
+              )}
+            </div>
+          </Link>
+        </div>
+        <ul className="flex items-center space-x-4 leading-5 sm:space-x-6 ">
           {links.map((link, index) => (
-            <li key={index} className="group relative">
-              <a href={link.to} className="text-white transition duration-300 hover:text-gray-300">
+            <li key={index} className="group relative hidden font-medium md:block">
+              <Link
+                href={link.to}
+                className="transition duration-300 hover:text-primary-600 dark:hover:text-primary-400"
+              >
                 {link.label}
-              </a>
+              </Link>
               {link.subLinks && link.subLinks.length > 0 && (
-                <ul className="absolute hidden space-y-2 bg-gray-700 p-2 group-hover:block">
+                <ul className="absolute hidden space-y-2 rounded-md border border-white bg-white p-2 px-4 shadow-lg group-hover:block dark:border-gray-900 dark:bg-gray-950">
                   {link.subLinks.map((subLink, subIndex) => (
                     <li key={subIndex}>
-                      <a
-                        href={`${link.to}/${subLink.toLowerCase()}`}
-                        className="text-white transition duration-300 hover:text-gray-300"
+                      <Link
+                        href={`${link.subLinksTo[subIndex]}`} // Bruh what is this
+                        className="py-2 transition duration-300 hover:text-primary-600 dark:hover:text-primary-400"
                       >
                         {subLink}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -36,7 +74,16 @@ const Header = () => {
           ))}
         </ul>
       </div>
-    </nav>
+      <div className="flex items-center">
+        <SearchButton />
+        <div className="ml-3.5 flex items-center">
+          <ThemeSwitch />
+        </div>
+        <div className="ml-2 flex items-center">
+          <MobileNav />
+        </div>
+      </div>
+    </header>
   )
 }
 
