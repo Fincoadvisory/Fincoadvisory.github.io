@@ -36,7 +36,7 @@ const Header = () => {
                 {link.label}
               </Link>
               {link.subLinks && link.subLinks.length > 0 && (
-                <ul className="absolute hidden space-y-2 p-4 rounded-md border border-white bg-white p-2 px-4 shadow-lg group-hover:block dark:border-gray-900 dark:bg-gray-950">
+                <ul className="absolute hidden space-y-2 rounded-md border border-white bg-white p-4 px-4 shadow-lg group-hover:block dark:border-gray-900 dark:bg-gray-950">
                   {link.subLinks.map((subLink, subIndex) => (
                     <li key={subIndex}>
                       <Link
