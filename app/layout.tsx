@@ -76,15 +76,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
-          <div className="flex h-screen flex-col justify-between font-sans">
-            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Header />
-              <SectionContainer>
+          <Header />
+          <SectionContainer>
+            <div className="flex h-screen flex-col justify-between font-sans">
+              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                 <main className="mb-auto">{children}</main>
-              </SectionContainer>
-            </SearchProvider>
-            <Footer />
-          </div>
+              </SearchProvider>
+              <Footer />
+            </div>
+          </SectionContainer>
         </ThemeProviders>
       </body>
     </html>
