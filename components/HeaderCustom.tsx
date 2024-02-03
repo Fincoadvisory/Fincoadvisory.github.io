@@ -1,3 +1,4 @@
+// Header.tsx
 import siteMetadata from '@/data/siteMetadata'
 import Logo from '@/data/logo.svg'
 import React from 'react'
@@ -61,7 +62,7 @@ const Header = () => {
                   {link.subLinks.map((subLink, subIndex) => (
                     <li key={subIndex}>
                       <Link
-                        href={`${link.subLinksTo[subIndex]}`} // Bruh what is this
+                        href={`${link.subLinksTo[subIndex]}`}
                         className="py-2 transition duration-300 hover:text-primary-600 dark:hover:text-primary-400"
                       >
                         {subLink}
@@ -79,8 +80,8 @@ const Header = () => {
         <div className="ml-3.5 flex items-center">
           <ThemeSwitch />
         </div>
-        <div className="ml-2 flex items-center">
-          <MobileNav />
+        <div className="ml-2 flex items-center md:hidden">
+          <MobileNav links={links} />
         </div>
       </div>
     </header>
