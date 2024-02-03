@@ -26,17 +26,17 @@ const Header = () => {
             </div>
           </Link>
         </div>
-        <ul className="flex items-center space-x-4 leading-5 sm:space-x-6 ">
+        <ul className="flex items-center space-x-4 leading-5 sm:space-x-6">
           {links.map((link, index) => (
-            <li key={index} className="group relative hidden font-medium md:block">
+            <li key={index} className="group relative hidden md:block">
               <Link
                 href={link.to}
-                className="transition duration-300 hover:text-primary-600 dark:hover:text-primary-400"
+                className="font-medium transition duration-300 hover:text-primary-600 dark:hover:text-primary-400"
               >
                 {link.label}
               </Link>
               {link.subLinks && link.subLinks.length > 0 && (
-                <ul className="absolute hidden space-y-2 rounded-md border border-white bg-white p-2 px-4 shadow-lg group-hover:block dark:border-gray-900 dark:bg-gray-950">
+                <ul className="absolute hidden space-y-2 p-4 rounded-md border border-white bg-white p-2 px-4 shadow-lg group-hover:block dark:border-gray-900 dark:bg-gray-950">
                   {link.subLinks.map((subLink, subIndex) => (
                     <li key={subIndex}>
                       <Link
