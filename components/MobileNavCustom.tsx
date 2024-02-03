@@ -56,6 +56,11 @@ const MobileNav = ({ links }) => {
           </button>
         </div>
         <nav className="fixed mt-8 h-full">
+          <div key="Home" className="px-12 py-2 font-bold tracking-widest">
+            <Link href="/" onClick={onToggleNav} className="text-2xl">
+              Home
+            </Link>
+          </div>
           {links.map((link) => (
             <div key={link.label} className="px-12 py-2 font-bold tracking-widest">
               <Link href={link.to} onClick={onToggleNav} className="text-2xl">
