@@ -6,31 +6,9 @@ import Link from './Link'
 import SearchButton from './SearchButton'
 import ThemeSwitch from './ThemeSwitch'
 import MobileNav from './MobileNavCustom'
+import links from '@/data/links'
 
 const Header = () => {
-  const links = [
-    {
-      label: 'Services',
-      to: '/services',
-      subLinks: ['Investment Management', 'Financial Planning'],
-      subLinksTo: ['/services/investment-management', '/services/financial-planning'],
-    },
-    {
-      label: 'Blog Posts',
-      to: '/blog-posts',
-      subLinks: ['All Posts', 'Featured', 'Classics'],
-      subLinksTo: ['/blog', '/tags/featured', '/tags/classics'],
-    },
-    {
-      label: 'Contact Us',
-      to: '/contact-us',
-    },
-    {
-      label: 'About',
-      to: '/about',
-    },
-  ]
-
   return (
     <header className="flex justify-between p-10">
       <div className="flex items-center">
@@ -83,7 +61,7 @@ const Header = () => {
           <ThemeSwitch />
         </div>
         <div className="ml-2 flex items-center md:hidden">
-          <MobileNav links={links} />
+          <MobileNav />
         </div>
       </div>
     </header>

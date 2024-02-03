@@ -2,8 +2,9 @@
 'use client'
 import { useState } from 'react'
 import Link from './Link'
+import links from '@/data/links'
 
-const MobileNav = ({ links }) => {
+const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
 
   const onToggleNav = () => {
