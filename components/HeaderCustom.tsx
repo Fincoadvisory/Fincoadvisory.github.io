@@ -53,7 +53,7 @@ const Header = () => {
         </ul>
       </div>
       <div className="ml-auto flex items-center">
-        <div className="hidden md:flex">
+        <div className="flex items-center">
           <SearchButton />
         </div>
         <div className="ml-3.5 flex items-center">
