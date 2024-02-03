@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from './Link'
 
-const MobileNav = () => {
+const MobileNav = ({ links }) => {
   const [navShow, setNavShow] = useState(false)
 
   const onToggleNav = () => {
@@ -17,29 +17,6 @@ const MobileNav = () => {
       return !status
     })
   }
-
-  const links = [
-    {
-      label: 'Services',
-      to: '/services',
-      subLinks: ['Investment Management', 'Financial Planning'],
-      subLinksTo: ['/services/investment-management', '/services/financial-planning'],
-    },
-    {
-      label: 'Blog Posts',
-      to: '/blog-posts',
-      subLinks: ['All Posts', 'Featured', 'Classics'],
-      subLinksTo: ['/blog', '/tags/featured', '/tags/classics'],
-    },
-    {
-      label: 'Contact Us',
-      to: '/contact-us',
-    },
-    {
-      label: 'About',
-      to: '/about',
-    },
-  ]
 
   return (
     <>
