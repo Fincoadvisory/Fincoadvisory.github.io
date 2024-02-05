@@ -9,7 +9,7 @@ import links from '@/data/links'
 
 const Header = () => {
   return (
-    <header className="flex justify-between p-10">
+    <header className="mb-6 flex justify-between bg-gray-100 px-6 py-6 dark:bg-gray-900">
       <div className="flex items-center">
         <div className="mr-5">
           <Link href="/" aria-label={siteMetadata.headerTitle}>
