@@ -79,11 +79,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
             <Header />
             <SectionContainer>
-              <div className="flex h-screen flex-col justify-between font-sans">
+              <div className="flex flex-col justify-between font-sans">
                 <main className="mb-auto">{children}</main>
-                <Footer />
               </div>
             </SectionContainer>
+            <Footer />
           </SearchProvider>
         </ThemeProviders>
       </body>

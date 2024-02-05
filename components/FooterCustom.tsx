@@ -5,7 +5,7 @@ import links from '@/data/links'
 export default function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-900">
-      <div className="container mx-auto px-6 pb-10">
+      <div className="container mx-auto mb-10 max-w-3xl px-6 pb-10 pt-1 sm:px-6 xl:max-w-5xl xl:px-0">
         <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
           <Link href="/" className="dark:text-gray-400">
             Home
