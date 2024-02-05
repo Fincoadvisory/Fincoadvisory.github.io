@@ -1,8 +1,28 @@
-import blogPostsNavData from '@/data/blogPostsNavData'
 import Card from '@/components/CardNoImage'
 import { genPageMetadata } from 'app/seo'
 
 export const metadata = genPageMetadata({ title: 'Blog Posts' })
+
+const blogPostsNavData = [
+  {
+    title: 'All Posts',
+    description: `DESCRIPTION HERE`,
+    imgSrc: '/static/images/google.png',
+    href: '/blog',
+  },
+  {
+    title: 'Featured',
+    description: `DESCRIPTION HERE`,
+    imgSrc: '/static/images/time-machine.jpg',
+    href: '/tags/featured',
+  },
+  {
+    title: 'Classics',
+    description: `DESCRIPTION HERE`,
+    imgSrc: '/static/images/time-machine.jpg',
+    href: '/tags/classics',
+  },
+]
 
 export default function Services() {
   return (

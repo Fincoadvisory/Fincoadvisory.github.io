@@ -1,8 +1,22 @@
-import servicesNavData from '@/data/servicesNavData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
 
 export const metadata = genPageMetadata({ title: 'Services' })
+
+const servicesNavData = [
+  {
+    title: 'Investment Management',
+    description: `DESCRIPTION HERE`,
+    imgSrc: '/static/images/google.png',
+    href: '/services/investment-management',
+  },
+  {
+    title: 'Financial Planning',
+    description: `DESCRIPTION HERE`,
+    imgSrc: '/static/images/time-machine.jpg',
+    href: '/services/financial-planning',
+  },
+]
 
 export default function Services() {
   return (
