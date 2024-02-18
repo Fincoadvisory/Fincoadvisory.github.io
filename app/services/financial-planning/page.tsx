@@ -7,17 +7,20 @@ export default function Page() {
   return (
     <div>
       <div className="py-10">
-        <h1 className="py-6 text-6xl font-bold">A relationship that puts you first</h1>
+        <h1 className="py-6 text-6xl font-bold text-primary-600 dark:text-primary-400">
+          A relationship that puts you first
+        </h1>
         <p className="pb-10 text-2xl">
           Get a dedicated advisor who's a fiduciary and doesn't make commissions so you can be
           confident for the long term.
         </p>
-        <h1 className="py-6 text-6xl font-bold">How we work together</h1>
+        <h1 className="py-6 text-6xl font-bold text-primary-600 dark:text-primary-400">
+          How we work together
+        </h1>
         <p className="pb-10 text-2xl">
           You won't find cookie-cutter plans here. We work together to understand what success looks
           like according to your vision and needs.
         </p>
-        <ContactButton></ContactButton>
         <p className="py-2 text-2xl">We'll work with you to:</p>
         <ol className="py-2 text-2xl">
           <li className="pb-4">
@@ -33,6 +36,7 @@ export default function Page() {
             support.
           </li>
         </ol>
+        <ContactButton></ContactButton>
         <div className="flex-1">
           {/* <Image
             src={imageUrl}
