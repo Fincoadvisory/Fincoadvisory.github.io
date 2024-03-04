@@ -1,5 +1,5 @@
 'use client'
-import { useState, button } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 
 const ContactButton = () => {
@@ -22,7 +22,11 @@ const ContactButton = () => {
           Loading…
         </iframe>
       ) : (
-        <button className="px-20 text-4xl font-bold" onClick={handleButtonClick} aria-label="Show Google Form">
+        <button
+          className="px-20 text-4xl font-bold"
+          onClick={handleButtonClick}
+          aria-label="Show Google Form"
+        >
           Contact us to schedule a call now.
         </button>
       )}
